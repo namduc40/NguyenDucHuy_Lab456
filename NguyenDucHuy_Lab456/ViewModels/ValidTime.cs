@@ -13,7 +13,7 @@ namespace NguyenDucHuy_Lab456.ViewModels
         {
             DateTime dateTime;
             var isValid = DateTime.TryParseExact(Convert.ToString(value), "HH:mm", CultureInfo.CurrentCulture, DateTimeStyles.None, out dateTime);
-            return isValid; //Để "HH:mm" thì chỉ nhập được từ 10-23h không nhập được từ 0-9h
+            return isValid; 
         }
     }
 }
