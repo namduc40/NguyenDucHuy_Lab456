@@ -17,11 +17,7 @@ namespace NguyenDucHuy_Lab456.Controllers
         }
         public ActionResult Index()
         {
-            var upcomingCourses = _dbContext.Courses
-                .Include(c => c.Lecturer)
-                .Include(c => c.Category)
-                .Where(c => c.Datetime > DateTime.Now)
-                .ToList();
+            var upcomingCourses = _dbContext.Courses.Include(c => c.Lecturer).Include(c => c.Category).Where(c => c.Datetime > DateTime.Now).ToList();
             return View(upcomingCourses);
         }
 
